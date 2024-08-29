@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(containers_tests)
+project(containers_tests_project)
 
 # Build googletest
 add_subdirectory(
@@ -9,24 +9,25 @@ add_subdirectory(
 
 # Test target
 add_executable(
-    test_assertions
-    test/test_assertions.cpp
-)
+    containers_tests
+    test/l_container_test.cpp
+    test/s_container_test.cpp
+    )
 
 # Add src to the include directories for the test target
 target_include_directories(
-    test_assertions PRIVATE
+    containers_tests PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/src"
 )
 
 # Link test target against gtest libraries
 target_link_libraries(
-    test_assertions PRIVATE
+    containers_tests PRIVATE
     gtest gtest_main
 )
 
 set_target_properties(
-    test_assertions 
+    containers_tests 
 PROPERTIES 
     CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON
 )
