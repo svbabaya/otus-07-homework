@@ -10,9 +10,9 @@ add_subdirectory(
 # Test target
 add_executable(
     containers_tests
-    test/l_container_test.cpp
-    test/s_container_test.cpp
-    )
+    test/s_container_tests.cpp
+    test/l_container_tests.cpp
+)
 
 # Add src to the include directories for the test target
 target_include_directories(
