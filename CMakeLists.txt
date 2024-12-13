@@ -16,20 +16,17 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
-# Test target
 add_executable(
     containers_tests
     test/s_container_tests.cpp
     test/l_container_tests.cpp
 )
 
-# Add src to the include directories for the test target
 target_include_directories(
     containers_tests PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/src"
 )
 
-# Link test target against gtest libraries
 target_link_libraries(
     containers_tests PRIVATE
     gtest gtest_main
