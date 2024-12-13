@@ -1,5 +1,5 @@
 ## otus-07-homework
-* main task: No
-* task 1: No
+* main task: Yes
+* task 1: Yes
 * task 2: No
 * task 3: No
